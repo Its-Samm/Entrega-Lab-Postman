@@ -1,0 +1,6 @@
+<div class="d-flex justify-content-end" >
+    <app-button [config]="createButtonConfig" (onClick)="createFacult()" />
+</div>
+<div class="mt-3">
+    <app-table-faculties [faculties]="faculties" (onClickActions)="tableEvents($event)" />
+</div>

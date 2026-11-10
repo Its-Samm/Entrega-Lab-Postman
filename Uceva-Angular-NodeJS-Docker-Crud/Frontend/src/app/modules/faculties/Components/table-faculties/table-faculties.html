@@ -1,0 +1,56 @@
+<div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle">
+
+        <thead class="table-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Estado</th>
+                <th scope="col" class="text-center">Opciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @for (facult of faculties; track facult.id) {
+                <tr>
+                    <td>{{ facult.id }}</td>
+
+                    <td class="fw-semibold">
+                        {{ facult.name }}
+                    </td>
+
+                    <td>{{ facult.description }}</td>
+
+                    <td>
+                        @if (facult.status) {
+                            <span class="badge text-bg-success">
+                                Activo
+                            </span>
+                        } @else {
+                            <span class="badge text-bg-danger">
+                                Inactivo
+                            </span>
+                        }
+                    </td>
+
+                    <!-- Options -->
+                    <td>
+                        <div class="d-flex justify-content-center gap-2">
+                            <app-button [config]="configDetailButton" (onClick)="click(facult.id, 'detail')" />
+                            <app-button [config]="configEditButton" (onClick)="click(facult.id, 'edit')" />
+                            <app-button [config]="configDeleteButton" (onClick)="click(facult.id, 'delete')" />
+                        </div>
+                    </td>
+                </tr>
+            } @empty {
+                <tr>
+                    <td colspan="9" class="text-center py-4 text-muted">
+                        No hay facultades registradas.
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
