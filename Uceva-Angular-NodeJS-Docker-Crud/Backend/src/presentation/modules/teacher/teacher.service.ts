@@ -18,6 +18,11 @@ export class TeacherService {
     }
 
     public async createTeacher(teacher: CreateTeacher): Promise<Teacher> {
+        // Verificar que no exista ya un profesor con el mismo id
+        const existingTeacher = await this.getTeacherById(teacher.id);
+        if(existingTeacher) {
+            throw CustomError.internalServer(`Ya existe un profesor con ese id`);
+        }
         const sql = `
             INSERT INTO teachers (
                 id,

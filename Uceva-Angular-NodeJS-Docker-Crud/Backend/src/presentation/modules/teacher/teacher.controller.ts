@@ -22,7 +22,7 @@ export class TeacherController {
         .catch((error) => HandleError.error(error, res));
     }
 
-     createTeacher = (req: Request, res: Response) => {
+        createTeacher = (req: Request, res: Response) => {
         const [error, createTeacherDTO] = CreateTeacherDTO.create(req.body);
         if (error) return res.status(400).json({ error });
         this.teacherService.createTeacher(createTeacherDTO!)
@@ -35,7 +35,7 @@ export class TeacherController {
         const [error, updateteacherDTO] = UpdateTeacherDTO.create(req.body);
         if (error) return res.status(400).json({ error });
         this.teacherService.updateTeacher(id, updateteacherDTO!)
-        .then((teacher) => res.status(200 ).json(teacher))
+        .then((teacher) => res.status(200).json(teacher))
         .catch((error) => HandleError.error(error, res));
     };
 

@@ -36,21 +36,16 @@ export class FacultController {
         const [error, updateFacultDTO] = UpdateFacultDTO.create(req.body);
         if (error) return res.status(400).json({ error });
         this.facultService.updateFacult(id, updateFacultDTO!)
-        .then((faculties) => res.status(200 ).json(faculties))
+        .then((faculties) => res.status(200).json(faculties))
         .catch((error) => HandleError.error(error, res));
     };
 
     deleteFacult = (req: Request, res: Response) => {
         const id = Number(req.params.id);
-        this.facultService.deletefacult(id)
+        this.facultService.deleteFacult(id)
         .then((result) => res.status(200).json({ result }))
         .catch((error) => HandleError.error(error, res));
     };
 
-
-
-
-   
-
-
 }
+

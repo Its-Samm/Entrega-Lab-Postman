@@ -34,7 +34,7 @@ export class StudentController {
     const [error, updateStudentDTO] = UpdateStudentDTO.create(req.body);
     if (error) return res.status(400).json({ error });
     this.studentService.updateStudent(id, updateStudentDTO!)
-    .then((student) => res.status(200 ).json(student))
+    .then((student) => res.status(200).json(student))
     .catch((error) => HandleError.error(error, res));
   };
 

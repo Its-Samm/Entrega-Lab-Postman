@@ -34,7 +34,7 @@ export class CourseController {
         const [error, updateCourseDTO] = UpdateCourseDTO.create(req.body);
         if (error) return res.status(400).json({ error });
         this.courseService.updateCourse(id, updateCourseDTO!)
-        .then((course) => res.status(200 ).json(course))
+        .then((course) => res.status(200).json(course))
         .catch((error) => HandleError.error(error, res));
     };
 

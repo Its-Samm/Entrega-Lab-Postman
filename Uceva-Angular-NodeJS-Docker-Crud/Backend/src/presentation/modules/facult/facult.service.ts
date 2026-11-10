@@ -46,7 +46,7 @@ export class FacultService {
     ): Promise<Facult> {
         const existingFacult = await this.getFacultById(id);
         if(!existingFacult) {
-            throw CustomError.internalServer(`No existe un facultad con ese id`);
+            throw CustomError.internalServer(`No existe una facultad con ese id`);
         }
         const sql = `
             UPDATE faculties
@@ -70,7 +70,7 @@ export class FacultService {
         return facultUpdated;
     }
 
-    public async deletefacult(id: number): Promise<boolean> {
+    public async deleteFacult(id: number): Promise<boolean> {
         const existingFacult = await this.getFacultById(id);
         if(!existingFacult) {
             throw CustomError.internalServer(`No existe una facultad con ese id`);
