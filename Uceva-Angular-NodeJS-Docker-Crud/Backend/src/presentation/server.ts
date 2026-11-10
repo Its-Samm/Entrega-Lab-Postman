@@ -85,7 +85,12 @@ export class Server {
     });
   }
 
-  async databaseConnect(){
+  /**
+   * Verifica la conexión con PostgreSQL mediante una consulta simple.
+   *
+   * @throws Error si la conexión falla
+   */
+  private async databaseConnect(): Promise<void> {
     try {
       await pool.query("SELECT 1");
       console.log("Conexión a PostgreSQL establecida correctamente");
