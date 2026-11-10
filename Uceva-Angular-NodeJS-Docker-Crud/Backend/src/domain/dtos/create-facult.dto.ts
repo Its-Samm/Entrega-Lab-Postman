@@ -18,7 +18,7 @@ export class CreateFacultDTO {
 
     if (!id) return ["Missing id"];
     if (!name) return ["Missing name"];
-    if (!description) ["Missing description"];
+    if (!description) return ["Missing description"];
     if (!status) return ["Missing status"];
 
     if (name && name.length > 100)
