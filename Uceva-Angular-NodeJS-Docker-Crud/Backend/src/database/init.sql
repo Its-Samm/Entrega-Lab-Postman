@@ -32,6 +32,6 @@ CREATE TABLE IF NOT EXISTS teachers (
     phone VARCHAR(15) UNIQUE NOT NULL,
     address VARCHAR(150) NOT NULL,
     birthdate DATE NOT NULL,
-    role VARCHAR (3) NOT NULL CHECK (ROLE IN ('DTC', 'DMT', 'DHC')),
+    role VARCHAR(3) NOT NULL CHECK (role IN ('DTC', 'DMT', 'DHC')),
     status BOOLEAN DEFAULT TRUE
 );

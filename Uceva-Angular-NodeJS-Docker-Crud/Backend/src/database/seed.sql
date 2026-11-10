@@ -80,16 +80,16 @@ INSERT INTO teachers (
     role,
     status
 ) VALUES
-('2001', 'Juan Martinez', 'juan.martinez@gmail.com', '3311234567', 'Carrera 5 # 10-25', '1980-05-15', 'DTC', TRUE),
+(2001, 'Juan Martinez', 'juan.martinez@gmail.com', '3311234567', 'Carrera 5 # 10-25', '1980-05-15', 'DTC', TRUE),
 
-('2002', 'Arnulfo Velasquez ', 'arnulfo.velasquez@gmail.com', '3141234567', 'Carrera 51 # 25-25', '1987-05-15', 'DHC', TRUE),
+(2002, 'Arnulfo Velasquez', 'arnulfo.velasquez@gmail.com', '3141234567', 'Carrera 51 # 25-25', '1987-05-15', 'DHC', TRUE),
 
-('2003', 'Ana Caicedo', 'ana.caicedo@gmail.com', '3131234567', 'Calle 25 # 4-07', '2000-07-30', 'DMT', TRUE),
+(2003, 'Ana Caicedo', 'ana.caicedo@gmail.com', '3131234567', 'Calle 25 # 4-07', '2000-07-30', 'DMT', TRUE),
 
-('2004', 'Andres Gómez', 'andres.gomez@gmail.com', '3111234567', 'Carrera 30 # 10-42', '1980-05-15', 'DTC', TRUE),
+(2004, 'Andres Gómez', 'andres.gomez@gmail.com', '3111234567', 'Carrera 30 # 10-42', '1980-05-15', 'DTC', TRUE),
 
-('2005', 'Samuel Rodriguez', 'samuel.rodriguez@gmail.com', '3121234567', 'calle 2 # 2-25', '2002-08-03', 'DHC', TRUE),
+(2005, 'Samuel Rodriguez', 'samuel.rodriguez@gmail.com', '3121234567', 'calle 2 # 2-25', '2002-08-03', 'DHC', TRUE),
 
-('2006', 'Teofilia Cano', 'teofilia.cano@gmail.com', '3211234567', 'Carrera 100 # 25-125', '1980-05-15', 'DTC', TRUE),
+(2006, 'Teofilia Cano', 'teofilia.cano@gmail.com', '3211234567', 'Carrera 100 # 25-125', '1980-05-15', 'DTC', TRUE),
 
-('2007', 'Fernanda Quintero', 'fernanda.quintero@gmail.com', '3231234567', 'Calle 35 # 11-25', '1998-05-15', 'DMT', TRUE);
+(2007, 'Fernanda Quintero', 'fernanda.quintero@gmail.com', '3231234567', 'Calle 35 # 11-25', '1998-05-15', 'DMT', TRUE);
